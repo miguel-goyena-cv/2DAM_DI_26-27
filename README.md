@@ -8,6 +8,12 @@ Módulo Desarrollo Interfaces
 
 ## 📑 Índice de proyectos
 
+### 🔹 SASS: **UT2_SASS**
+- **Descripción:** Ejercicios para creas hojas de estilo SCSS  
+- **Ejemplos incluidos:**  
+  - EjemploGuiadoSCSS: Trabaja los elementos vistos en clase
+- **Conceptos clave:** scss, sass, variables, mixins, funciones, librerias, anidamiento, arquitectura, css
+
 ---
 
 ## 🚀 Cómo ejecutar los proyectos
