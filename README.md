@@ -12,6 +12,7 @@ Módulo Desarrollo Interfaces
 - **Descripción:** Ejercicios para creas hojas de estilo SCSS  
 - **Ejemplos incluidos:**  
   - EjemploGuiadoSCSS: Trabaja los elementos vistos en clase
+  - Lemonado y LemonadeFinal: Ejercicio SCSS. Tiene ya el resultado final
 - **Conceptos clave:** scss, sass, variables, mixins, funciones, librerias, anidamiento, arquitectura, css
 
 ---

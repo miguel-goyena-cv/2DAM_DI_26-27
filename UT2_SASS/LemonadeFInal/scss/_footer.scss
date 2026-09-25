@@ -1,0 +1,9 @@
+@use 'main';
+
+footer {
+    @extend section;
+    position: fixed;
+    bottom: 0;
+    background: url('../images/bg-horizontal-menu.jpg');
+    font-style: normal;
+}
