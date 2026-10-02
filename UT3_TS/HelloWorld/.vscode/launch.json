@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Chrome against localhost",
+      "url": "file:///C:/Workspaces/2DAM/DI/Workspaces/2DAM_DI_26-27/UT3_TS/HelloWorld/index.html",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}
