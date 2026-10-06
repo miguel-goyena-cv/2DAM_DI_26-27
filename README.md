@@ -15,6 +15,14 @@ Módulo Desarrollo Interfaces
   - Lemonado y LemonadeFinal: Ejercicio SCSS. Tiene ya el resultado final
 - **Conceptos clave:** scss, sass, variables, mixins, funciones, librerias, anidamiento, arquitectura, css
 
+### 🔹 TS: **UT2_TS**
+- **Descripción:** Ejercicios para trabajar el lebguaje TypeScript 
+- **Ejemplos incluidos:**  
+  - Heloworld: Esta claro , ¿no?
+  - Calculadora: Ejercicio TS, para manejar conceptos como tipado o import de librerias JS
+  - EjemploPOO: Ejercicio TS, para manejar POO, en concreto nos hacemos una clase botón y una clase textbox propia y aprendemos a utilzarlos en un main
+- **Conceptos clave:** TS, tipado, POO, herencia, abstractos, interfaces, expcepciones
+
 ---
 
 ## 🚀 Cómo ejecutar los proyectos
