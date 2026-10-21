@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <div class="row">
+                @for (photo of photos; track $index){
+                    <div class="col-4">
+                        <app-photo-profile [title]="photo.name" [srcImage]="photo.photoSrc" [messageClick]="photo.messageClick" (eventClick)="alertMensaje($event)"/>
+                    </div>
+                }
+            </div>
+
+            <p class="display-1" >{{myName}}</p>
+            @if (myJobHidden()){
+                <p class="display-2">{{myJob}}</p>
+            }
+
+            <button (click)="ocultarMyJob()">{{textoBoton()}}</button>
+        </div>
+    </div>
+</div>
+
