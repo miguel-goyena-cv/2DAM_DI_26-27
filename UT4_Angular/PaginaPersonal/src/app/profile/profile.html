@@ -4,7 +4,10 @@
             <div class="row">
                 @for (photo of photos; track $index){
                     <div class="col-4">
-                        <app-photo-profile [title]="photo.name" [srcImage]="photo.photoSrc" [messageClick]="photo.messageClick" (eventClick)="alertMensaje($event)"/>
+                        <app-photo-profile [title]="photo.name" 
+                        [srcImage]="photo.photoSrc" 
+                        [messageClick]="photo.messageClick" 
+                        (eventClick)="alertMensaje($event)"/>
                     </div>
                 }
             </div>
