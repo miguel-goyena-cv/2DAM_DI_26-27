@@ -10,7 +10,7 @@ import { PhotoProfileModel } from '../models/PhotoProfileModel';
 })
 export class Profile {
 
-  myName: String = "Miguel Goyena ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff";
+  myName: String = "Miguel Goyena";
   myJob: String = "Profesor 4V";
   myJobHidden = signal(false);
   textoBoton = signal("Ocultar JOB");
