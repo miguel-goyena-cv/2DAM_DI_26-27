@@ -2,10 +2,9 @@ import { Component, output } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ContactService } from '../services/contact-service';
 import { ContactModel } from '../models/ContactModel';
-import { ContactList } from '../contact-list/contact-list';
 
 @Component({
-  imports: [ReactiveFormsModule, ContactList],
+  imports: [ReactiveFormsModule],
   selector: 'app-contact-form',
   styleUrl: './contact-form.scss',
   templateUrl: './contact-form.html',

@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-6">
             <div class="row">
-                @for (photo of photos; track $index){
+                @for (photo of photos(); track $index){
                     <div class="col-4">
                         <app-photo-profile [title]="photo.name" 
                         [srcImage]="photo.photoSrc" 

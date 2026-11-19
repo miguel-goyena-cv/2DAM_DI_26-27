@@ -1,6 +1,7 @@
 import { Component, Signal, signal } from '@angular/core';
 import { PhotoProfile } from '../photo-profile/photo-profile';
 import { PhotoProfileModel } from '../models/PhotoProfileModel';
+import { ProfileService } from '../services/profile-service';
 
 @Component({
   imports: [PhotoProfile],
@@ -14,27 +15,37 @@ export class Profile {
   myJob: String = "Profesor 4V";
   myJobHidden = signal(false);
   textoBoton = signal("Ocultar JOB");
-  tituloImagen ="Profesor";
-  photos: PhotoProfileModel[] = [];
+  tituloImagen = "Profesor";
+  photos = signal<PhotoProfileModel[]>([]);
 
-  constructor() {
-    let fotoContento = new PhotoProfileModel("Estoy Contento", "https://img.freepik.com/vector-gratis/ilustracion-joven-sonriente_1308-173524.jpg?semt=ais_hybrid&w=740&q=80", "Yujuu");
-    let fotoTriste = new PhotoProfileModel("Estoy Triste", "https://static.vecteezy.com/system/resources/previews/053/232/166/non_2x/sad-boy-cartoon-avatar-illustration-free-vector.jpg", "Buuua");
-    this.photos = [fotoContento, fotoTriste];
+  constructor(private profileService: ProfileService) {
   }
 
-  ocultarMyJob(){
-    if (!this.myJobHidden()){
+  ngOnInit() {
+    this.profileService.getFotoPerfil()
+    .subscribe({
+      next: body => {
+        console.log('Body:', body);
+        this.photos.set(body);
+      },
+      error: error => console.error('Error al cargar las fotos del perfil', error)
+    });
+    alert("Lo saco antes de recibir la peticion");
+  }
+
+
+  ocultarMyJob() {
+    if (!this.myJobHidden()) {
       this.textoBoton.set("Mostrar JOB");
     }
-    else{
+    else {
       this.textoBoton.set("Ocultar JOB");
     }
     this.myJobHidden.set(!this.myJobHidden());
-    
+
   }
 
-  alertMensaje(mensaje: string){
+  alertMensaje(mensaje: string) {
     alert('Miguel DICE: ' + mensaje);
   }
 
