@@ -9,7 +9,7 @@
     <tbody>
         @for (contact of listarContactos(); track $index){
         <tr>
-            <th scope="row">$index</th>
+            <th scope="row">{{$index+1}}</th>
             <td>{{contact.email}}</td>
             <td>{{contact.description}}</td>
         </tr>
