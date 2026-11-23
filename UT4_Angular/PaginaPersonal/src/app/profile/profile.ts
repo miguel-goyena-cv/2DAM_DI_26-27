@@ -30,7 +30,6 @@ export class Profile {
       },
       error: error => console.error('Error al cargar las fotos del perfil', error)
     });
-    alert("Lo saco antes de recibir la peticion");
   }
 
 

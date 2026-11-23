@@ -1,24 +1,23 @@
 import { Injectable, Service, signal } from '@angular/core';
 import { ContactModel } from '../models/ContactModel';
+import { HttpClient, HttpResponse } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root'
 })
 export class ContactService {
 
-  private contactosRealizados = signal<ContactModel[]>([
-    new ContactModel("miguel_goyena@cuatrovientos.org", "Hello Miguel!!"),
-    new ContactModel("aaaa@cuatrovientos.org", "Hello Quiero tu pasta!!!")
-  ]);
+  constructor(private http: HttpClient) { }
 
-  contactos = this.contactosRealizados.asReadonly();
 
   anadirContacto(contacto: ContactModel) {
     // Usamos .update() creando un nuevo array para que Angular detecte el cambio
-    this.contactosRealizados.update(listaActual => [...listaActual, contacto]);
+    // this.contactosRealizados.update(listaActual => [...listaActual, contacto]);
   }
 
-  listarContactos(): ContactModel[] {
-    return this.contactosRealizados();
+  listarContactos(): Observable<HttpResponse<ContactModel[]>> {
+    return this.http
+      .get<ContactModel[]>('https://6790ccf7af8442fd7377c747.mockapi.io/contacts', { observe: 'response' });
   }
 }
