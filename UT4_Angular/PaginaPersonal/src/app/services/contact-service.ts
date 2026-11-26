@@ -11,9 +11,8 @@ export class ContactService {
   constructor(private http: HttpClient) { }
 
 
-  anadirContacto(contacto: ContactModel) {
-    // Usamos .update() creando un nuevo array para que Angular detecte el cambio
-    // this.contactosRealizados.update(listaActual => [...listaActual, contacto]);
+  anadirContacto(contacto: ContactModel): Observable<ContactModel>{
+    return this.http.post<ContactModel>('https://6790ccf7af8442fd7377c747.mockapi.io/contacts', contacto);
   }
 
   listarContactos(): Observable<HttpResponse<ContactModel[]>> {
