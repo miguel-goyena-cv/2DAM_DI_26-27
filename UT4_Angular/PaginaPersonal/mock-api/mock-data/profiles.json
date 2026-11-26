@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Estoy Contento Maite",
+    "photoSrc": "https://img.freepik.com/vector-gratis/ilustracion-joven-sonriente_1308-173524.jpg?semt=ais_hybrid&w=740&q=80",
+    "messageClick": "Que estoy contento!!",
+    "id": "1"
+  },
+  {
+    "name": "Estoy Triste",
+    "photoSrc": "https://static.vecteezy.com/system/resources/previews/053/232/166/non_2x/sad-boy-cartoon-avatar-illustration-free-vector.jpg",
+    "messageClick": "Que mierda de vida!!!",
+    "id": "2"
+  }
+]

@@ -8,7 +8,8 @@ import { Observable, ReplaySubject } from 'rxjs';
 })
 export class ContactService {
 
-  static readonly urlContacts = 'https://6790ccf7af8442fd7377c747.mockapi.io/contacts';
+  //static readonly urlContacts = 'https://6790ccf7af8442fd7377c747.mockapi.io/contacts';
+  static readonly urlContacts = 'http://localhost:3000/contacts';
 
   updateSubject: ReplaySubject<any> = new ReplaySubject();
   changesOnContacts: Observable<any> = this.updateSubject.asObservable();
