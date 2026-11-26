@@ -33,6 +33,7 @@ export class ContactForm {
     this.contactService.anadirContacto(contacto)
     .subscribe(newContact => {
       alert('Contact Created:'+ JSON.stringify(newContact));
+      this.contactService.notifyUpdateContact(null);
     });
   }
 }

@@ -1,6 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
 import { ContactService } from '../services/contact-service';
 import { ContactModel } from '../models/ContactModel';
+import { Subscription } from 'rxjs';
 
 @Component({
   imports: [],
@@ -12,9 +13,32 @@ export class ContactList {
 
   contactos = signal<ContactModel[]>([]);
 
+  private subscriptionUpdate: Subscription | null = null;
+
   constructor(private contactService: ContactService) { }
 
   ngOnInit() {
+
+    this.listarContactos();
+
+    // We subscribe to changes in Contacts
+    this.subscriptionUpdate = this.contactService.changesOnContacts.subscribe(
+      () => {
+        this.contactService.listarContactos()
+          .subscribe(res => {
+            this.listarContactos();
+          });
+      }
+    );
+
+  }
+
+  ngOnDestroy() {
+    this.subscriptionUpdate!.unsubscribe();
+  }
+
+
+  private listarContactos() {
     this.contactService.listarContactos()
       .subscribe({
 
@@ -28,7 +52,7 @@ export class ContactList {
         },
 
         error: error => console.error('Error al cargar los contactos', error)
-        
+
       });
   }
 
