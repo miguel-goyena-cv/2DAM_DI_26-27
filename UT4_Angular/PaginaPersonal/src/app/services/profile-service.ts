@@ -8,8 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class ProfileService {
 
-    //static readonly urlProfile = 'https://6790ccf7af8442fd7377c747.mockapi.io/profiles';
-    static readonly urlProfile = 'http://localhost:3000/profiles';
+    static readonly urlProfile = 'https://6790ccf7af8442fd7377c747.mockapi.io/profiles';
+    //static readonly urlProfile = 'http://localhost:3000/profiles';
 
     constructor(private http: HttpClient) { }
 

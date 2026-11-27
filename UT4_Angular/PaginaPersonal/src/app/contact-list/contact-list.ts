@@ -24,10 +24,7 @@ export class ContactList {
     // We subscribe to changes in Contacts
     this.subscriptionUpdate = this.contactService.changesOnContacts.subscribe(
       () => {
-        this.contactService.listarContactos()
-          .subscribe(res => {
-            this.listarContactos();
-          });
+        this.listarContactos();
       }
     );
 
